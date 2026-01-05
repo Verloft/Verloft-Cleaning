@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERLOFT CLEANING - Limpieza Profesional en Punta Cana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #0a0a0a;
+            --secondary-dark: #1a1a1a;
+            --wine-dark: #4a1f2f;
+            --gold: #C9A24D;
+            --gold-hover: #b89143;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --border-radius: 12px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 5%;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar.hidden {
+            transform: translateY(-100%);
+        }
+
+        .navbar-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+ .logo {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 1.3rem;
+    text-decoration: none; /* 👈 QUITA LA LÍNEA */
+}
+
+
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--gold);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: var(--gold);
+            transition: all 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.8), rgba(74, 31, 47, 0.6));
+            z-index: 2;
+        }
+
+        .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: min(1400px, 80vw);
+    padding: 0 5%;
+    animation: fadeInUp 1s ease;
+    margin: 0 auto;
+}
+
+
+   .hero h1 {
+    font-size: 3.5rem; /* mantenemos tamaño */
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--white);
+
+    max-width: 1200px;   /* 👈 MÁS ANCHO */
+    margin: 0 auto 1.5rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+}
+
+
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: var(--border-radius);
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--gold-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 162, 77, 0.3);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 6rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+         .full-width-section {
+    width: 100vw;                    
+    background: var(--secondary-dark); /* fondo gris oscuro */
+    padding: 6rem 5%;
+    box-sizing: border-box;          
+}
+
+.section-content {
+    max-width: 1400px;               
+    margin: 0 auto;                  
+}
+ 
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--secondary-dark);
+            padding: 2.5rem 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(201, 162, 77, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 40px rgba(201, 162, 77, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .service-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Service Models */
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .model-card {
+            background: linear-gradient(135deg, var(--secondary-dark), var(--wine-dark));
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .model-card h3 {
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .model-card p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+        }
+
+        /* Zones */
+        .zones-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .zone-card {
+            background: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .zone-card:hover {
+            border-color: var(--gold);
+        }
+
+        .zone-card h3 {
+            font-size: 1.3rem;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .zone-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* How It Works */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            position: relative;
+            text-align: center;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: var(--gold);
+            color: var(--primary-dark);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .step p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.95rem;
+        }
+
+        /* Gallery */
+        .gallery-container {
+            position: relative;
+            max-width: 900px;
+            margin: 3rem auto;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+        }
+
+        .gallery-slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-slide {
+            min-width: 100%;
+            height: 500px;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(201, 162, 77, 0.9);
+            color: var(--primary-dark);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .gallery-nav:hover {
+            background: var(--gold);
+        }
+
+        .gallery-prev {
+            left: 20px;
+        }
+
+        .gallery-next {
+            right: 20px;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+
+        .faq-item {
+            background: var(--secondary-dark);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid rgba(201, 162, 77, 0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            color: var(--gold);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--wine-dark), var(--secondary-dark));
+            padding: 6rem 5%;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-dark);
+            padding: 3rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(201, 162, 77, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer h3 {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: var(--gold-hover);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+       .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+        /* Responsive */
+   @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: rgba(10, 10, 10, 0.98);
+        width: 100%;
+        padding: 2rem;
+        transition: left 0.3s;
+        gap: 1.5rem;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 4rem 5%;
+            }
+
+            .gallery-slide {
+                height: 300px;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+        #servicios {
+    background-color: #0a0a0a; /* negro sólido limpio */
+}
+
+.scroll-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down .mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--white);
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.scroll-down .wheel {
+    width: 4px;
+    height: 8px;
+    background: var(--white);
+    display: block;
+    margin: 6px auto;
+    border-radius: 2px;
+    animation: wheelMove 1.5s infinite;
+}
+
+.scroll-down .scroll-text {
+    color: var(--white);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Animaciones */
+@keyframes wheelMove {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(10px); opacity: 0.5; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* CTA Administración de Propiedades */
+.cta-management {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    background: var(--secondary-dark); /* coincide con tu web */
+    color: var(--white);
+}
+
+.cta-management .cta-card {
+    text-align: center;
+    max-width: 700px;
+    background: linear-gradient(135deg, rgba(74,31,47,0.85), rgba(26,26,26,0.85));
+    padding: 40px 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cta-management h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cta-management p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.9);
+}
+
+.cta-management .btn-primary {
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    background: var(--gold);
+    color: var(--primary-dark);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-management .btn-primary:hover {
+    background: var(--gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(201, 162, 77, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cta-management h2 {
+        font-size: 24px;
+    }
+
+    .cta-management p {
+        font-size: 15px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#inicio" class="logo">Verloft Cleaning</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#zonas">Zonas</a></li>
+                <li><a href="#como-funciona">Cómo funciona</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+   <!-- Hero Section -->
+<section class="hero" id="inicio">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="https://cdn.pixabay.com/video/2023/07/28/173568-851827012_large.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>LIMPIEZA PROFESIONAL PARA PROPIEDADES QUE EXIGEN EXCELENCIA</h1>
+        <p>Especialistas en limpieza profesional para propiedades de alto estándar</p>
+        <a href="https://wa.me/18098755831" class="cta-button" target="_blank">Solicitar servicio</a>
+
+        <!-- Scroll Down Animation -->
+        <div class="scroll-down">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="scroll-text">Desliza hacia abajo</span>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Services Section -->
+<section class="section" id="servicios">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <p class="section-subtitle">Soluciones de limpieza profesional diseñadas para satisfacer las necesidades específicas de su propiedad</p>
+    
+    <div class="models-grid">
+        <div class="model-card fade-in">
+            <h3>Limpieza para Airbnb</h3>
+            <p>Servicio especializado entre huéspedes, asegurando que su propiedad esté impecable para cada nueva reserva.</p>
+        </div>
+        <div class="model-card fade-in">
+            <h3>Limpieza Profunda</h3>
+            <p>Limpieza exhaustiva de todas las áreas, incluyendo espacios difíciles de alcanzar y detalles que marcan la diferencia.</p>
+        </div>
+        <div class="model-card fade-in">
+            <h3>Check-in / Check-out</h3>
+            <p>Coordinación perfecta con sus horarios de entrada y salida, garantizando disponibilidad inmediata.</p>
+        </div>
+        <div class="model-card fade-in">
+            <h3>Post Construcción</h3>
+            <p>Eliminación profesional de polvo, residuos y acabados de obra, dejando su propiedad lista para habitar.</p>
+        </div>
+        <div class="model-card fade-in">
+            <h3>Limpieza Recurrente</h3>
+            <p>Programación flexible con personal dedicado para mantener su propiedad en condiciones óptimas constantemente.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Seguridad y Confianza</h2>
+    <p class="section-subtitle">
+        Protocolos diseñados para proteger su propiedad y garantizar total transparencia
+    </p>
+
+    <div class="models-grid">
+        <div class="model-card fade-in">
+            <h3>Supervisión con cámara corporal</h3>
+            <p>
+                Nuestro equipo puede portar cámaras corporales (bodycam) durante el servicio,
+                brindando respaldo visual, mayor control y tranquilidad al propietario.
+            </p>
+        </div>
+
+        <div class="model-card fade-in">
+            <h3>Protocolos de Seguridad</h3>
+            <p>
+                Personal identificado, procesos documentados y supervisión constante
+                para garantizar un servicio profesional y confiable.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Service Models -->
+<section class="full-width-section">
+    <div class="section-content">
+        <h2 class="section-title">Modelos de Servicio</h2>
+        <p class="section-subtitle">Flexibilidad que se adapta a sus necesidades operativas</p>
+        <div class="models-grid">
+            <div class="model-card fade-in">
+                <h3>Por Evento</h3>
+                <p>Servicio bajo demanda para ocasiones específicas, cambios de huésped o necesidades puntuales.</p>
+            </div>
+            <div class="model-card fade-in">
+                <h3>Recurrente</h3>
+                <p>Programación semanal, quincenal o mensual con equipo dedicado y tarifas preferenciales.</p>
+            </div>
+            <div class="model-card fade-in">
+                <h3>Paquetes Mensuales</h3>
+                <p>Planes integrales con servicios combinados, supervisión constante y gestión completa.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Zones Section -->
+<section class="section" id="zonas">
+    <h2 class="section-title">Zonas de Cobertura</h2>
+    <p class="section-subtitle">Servicio profesional en las principales áreas turísticas de la región</p>
+    <div class="models-grid">
+        <div class="model-card fade-in">
+            <h3>Punta Cana</h3>
+            <p>Cobertura completa</p>
+        </div>
+        <div class="model-card fade-in">
+            <h3>Bávaro</h3>
+            <p>Cobertura completa</p>
+        </div>
+        <div class="model-card fade-in">
+            <h3>Cap Cana</h3>
+            <p>Cobertura completa</p>
+        </div>
+        <div class="model-card fade-in">
+            <h3>Otras Zonas</h3>
+            <p>Sujeto a evaluación</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- How It Works -->
+<section class="full-width-section" id="como-funciona">
+  <div class="section-content">
+    <h2 class="section-title">Cómo Funciona</h2>
+    <p class="section-subtitle">Un proceso simple y eficiente diseñado para su tranquilidad</p>
+    <div class="models-grid">
+        <div class="model-card fade-in">
+            <div class="step-number">1</div>
+            <h3>Solicitud de Servicio</h3>
+            <p>Contáctenos vía WhatsApp o formulario con los detalles de su propiedad y necesidades específicas.</p>
+        </div>
+        <div class="model-card fade-in">
+            <div class="step-number">2</div>
+            <h3>Coordinación</h3>
+            <p>Nuestro equipo coordina horarios, evalúa requerimientos y asigna personal especializado.</p>
+        </div>
+        <div class="model-card fade-in">
+            <div class="step-number">3</div>
+            <h3>Limpieza Profesional</h3>
+            <p>Ejecución del servicio con estándares premium, productos de calidad y atención al detalle.</p>
+        </div>
+        <div class="model-card fade-in">
+            <div class="step-number">4</div>
+            <h3>Supervisión y Control</h3>
+            <p>Verificación de calidad, fotografías de registro y confirmación de satisfacción total.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Gallery -->
+<section class="section" data-aos="fade-up">
+    <h2 class="section-title">Nuestro Trabajo</h2>
+    <p class="section-subtitle">Excelencia reflejada en cada proyecto</p>
+    <div class="gallery-container">
+        <div class="gallery-slider" id="gallerySlider">
+            <div class="gallery-slide">
+                <img src="images/limpieza.png" alt="Limpieza">
+            </div>
+        </div>
+        <button class="gallery-nav gallery-prev" id="prevBtn">‹</button>
+        <button class="gallery-nav gallery-next" id="nextBtn">›</button>
+    </div>
+</section>
+
+
+
+
+    <!-- CTA Administración de Propiedades -->
+<section class="cta-management">
+  <div class="cta-card" data-aos="fade-up">
+    <h2>Maximiza tus ingresos con administración profesional</h2>
+    <p>Con Verloft, tus propiedades se gestionan de manera integral: reservas, supervisión y tranquilidad total para ti.</p>
+    <a href="https://tuweb-verloft.com" class="btn btn-primary">Conoce Verloft</a>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="full-width-section" id="faq">
+    <div class="section-content">
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    ¿Qué incluye el servicio de limpieza para Airbnb?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Incluye limpieza completa de todas las habitaciones, cambio de sábanas, reposición de toallas, limpieza de baños y cocina, revisión de inventario y preparación para el próximo huésped según estándares premium.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    ¿Cómo coordinan los horarios de limpieza?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Nos sincronizamos con su calendario de reservas. Puede compartir acceso a su sistema de gestión o enviarnos las fechas directamente. Garantizamos disponibilidad inmediata después del check-out.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    ¿Proveen los productos de limpieza?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sí, utilizamos productos profesionales de alta calidad incluidos en el servicio. También podemos trabajar con productos específicos que usted prefiera para su propiedad.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    ¿Qué garantías ofrecen?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Garantizamos satisfacción total. Si algún aspecto no cumple con sus expectativas, regresamos sin costo adicional. Nuestro equipo está asegurado y supervisado constantemente.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    ¿Cómo funcionan los paquetes mensuales?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Los paquetes mensuales incluyen un número determinado de servicios con tarifas preferenciales, equipo dedicado, supervisión constante y coordinación prioritaria. Ideales para propiedades con alta rotación.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contacto">
+        <h2>¿Listo para elevar el estándar de su propiedad?</h2>
+        <p>Solicite su primer servicio y experimente la diferencia Verloft Cleaning</p>
+        <a href="https://wa.me/18095551234" class="cta-button" target="_blank">Contactar ahora</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Verloft Cleaning</h3>
+            <p>Punta Cana, República Dominicana</p>
+            <p style="margin-top: 1rem;">
+                Parte de <a href="https://verloft.com" target="_blank">Verloft</a> - Administración de Propiedades
+            </p>
+            <p style="margin-top: 2rem; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+                © 2025 Verloft Cleaning. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible"); // aparece
+                } else {
+                    entry.target.classList.remove("visible"); // desaparece al salir de viewport
+                }
+            });
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+    fadeElements.forEach(el => observer.observe(el));
+});
+
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+        const question = item.querySelector(".faq-question");
+        const answer = item.querySelector(".faq-answer");
+        const icon = item.querySelector(".faq-icon");
+
+        question.addEventListener("click", () => {
+            const isOpen = item.classList.contains("active");
+
+            // Cierra todos
+            faqItems.forEach(i => {
+                i.classList.remove("active");
+                i.querySelector(".faq-answer").style.maxHeight = null;
+                i.querySelector(".faq-icon").textContent = "+";
+            });
+
+            // Abre el actual si estaba cerrado
+            if (!isOpen) {
+                item.classList.add("active");
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                icon.textContent = "−";
+            }
+        });
+    });
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // tiempo de animación en ms
+    once: false,     // solo animar una vez al hacer scroll
+    offset: 150     // cuándo activar la animación
+  });
+</script>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+ // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+</script>
+
+    <script>
+        // Navbar scroll behavior
+        let lastScroll = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                navbar.classList.remove('hidden');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                navbar.classList.add('hidden');
+            } else {
+                navbar.classList.remove('hidden');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        
+        // Gallery slider
